@@ -13,6 +13,10 @@ const userSchema = new mongoose.Schema({
     referral_count: {
         type: String
     },
+    ref_link:{
+        type: String
+    }
+    ,
     twitter: {
         type: String
     },
