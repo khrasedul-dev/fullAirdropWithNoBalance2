@@ -12,9 +12,9 @@ const userModel = require('./userModel')
 const checkGroup = require('./checkGroup')
 
 
-const bot = new Telegraf('5199112586:AAH-1XFcsHlB3DOwQCFa0ZZP8g0Mys3g_Gs')
+// const bot = new Telegraf('5199112586:AAH-1XFcsHlB3DOwQCFa0ZZP8g0Mys3g_Gs')
 
-// const bot = new Composer()
+const bot = new Composer()
 
 
 mongoose.connect('mongodb+srv://rasedul20:rasedul20@cluster0.hzttg.mongodb.net/telegramProject?retryWrites=true&w=majority', {
@@ -408,6 +408,6 @@ bot.on('text', (ctx) => {
 })
 
 
-bot.launch()
+// bot.launch()
 
-// module.exports = bot
+module.exports = bot
