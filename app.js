@@ -382,7 +382,7 @@ bot.command('ref_link',(ctx)=>{
 	userModel.find({userId: ctx.from.id})
 	.then((data)=>{
 		if(data.length > 0){
-			ctx.telegram.sendMessage(ctx.chat.id , " You referral link is: `"+data[0].ref_link+"`" ,{
+			ctx.telegram.sendMessage(ctx.chat.id , " You referral link is:\n `"+data[0].ref_link+"`" ,{
 				parse_mode: 'Markdown'
 			}).catch((e)=>console.log("Ref link : group error"))
 		}else{
