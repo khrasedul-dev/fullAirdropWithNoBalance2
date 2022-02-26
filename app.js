@@ -258,7 +258,7 @@ bot.start((ctx) => {
 
 		if (data.length > 0) {
 
-			const wallet = data[0].wallet
+			const wallet = data[0].ejin
 			const r = data[0].referral_count
 
 
@@ -335,7 +335,7 @@ bot.action("start", (ctx) => {
 		userId: ctx.from.id
 	})
 	data.then((data) => {
-		const wallet = data[0].wallet
+		const wallet = data[0].ejin
 		const r = data[0].referral_count
 
 
