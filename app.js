@@ -33,7 +33,7 @@ bot.use(session({
 
 bot.action('join', ctx => {
 
-	ctx.telegram.sendMessage(ctx.chat.id, `Task 1: \n\nPlease Join our telegram gorup (If you are already a member of our group send the word "Airdrop" as a messsage in the group, then return here and click done to continue) \n\nhttps://t.me/cryptoteddies \n\nClick done to proceed after you have joined`, {
+	ctx.telegram.sendMessage(ctx.chat.id, `Task 1: \n\nPlease Join our telegram group (If you are already a member of our group send the word "Commander” then return here and click done).\n\nhttps://t.me/cryptoteddies \n\nClick done to proceed after you have joined`, {
 		reply_markup: {
 			inline_keyboard: [
 				[{
