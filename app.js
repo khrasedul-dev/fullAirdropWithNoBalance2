@@ -292,7 +292,7 @@ bot.start((ctx) => {
 				data.then((data) => {
 
 
-					ctx.telegram.sendMessage(ctx.chat.id, `Hello ${ctx.from.first_name}, \nWelcome to Teddies Share crypto bot.\n\nPlease complete all task to join our airdrop \n\nClick the start button below to join the contest.`, {
+					ctx.telegram.sendMessage(ctx.chat.id, `Welcome (${ctx.from.first_name})!\n\nPlease Complete All Tasks To Join The Crypto Teddies\nReferral Reward System. \n\nClick The Start Button To Begin.`, {
 						reply_markup: {
 							inline_keyboard: [
 								[{
@@ -309,7 +309,7 @@ bot.start((ctx) => {
 
 			} else {
 
-				ctx.telegram.sendMessage(ctx.chat.id, `Hello ${ctx.from.first_name}, \nWelcome to Teddies Share crypto bot.\n\nPlease complete all task to join our airdrop \n\nClick the start button below to join the contest.`, {
+				ctx.telegram.sendMessage(ctx.chat.id, `Welcome (${ctx.from.first_name})!\n\nPlease Complete All Tasks To Join The Crypto Teddies\nReferral Reward System. \n\nClick The Start Button To Begin.`, {
 					reply_markup: {
 						inline_keyboard: [
 							[{
