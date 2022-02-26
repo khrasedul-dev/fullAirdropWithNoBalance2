@@ -56,7 +56,7 @@ bot.action('groupJoin', (ctx) => {
 		if (data.length > 0) {
 
 
-			ctx.telegram.sendMessage(ctx.chat.id, `Task 2: \n\nPlease Download Beta https://www.cryptoteddies.com/download-beta/ \n\nClick done to next task`, {
+			ctx.telegram.sendMessage(ctx.chat.id, `Task 2: \n\nDownload Beta https://www.cryptoteddies.com/download-beta/ \n\nClick done to next task`, {
 				reply_markup: {
 					inline_keyboard: [
 						[{
@@ -168,7 +168,7 @@ const input_form = new WizardScene('input_data',
 
 						data4.then((data) => {
 
-							ctx.telegram.sendMessage(ctx.from.id, "Account Info:\n\nName - " + ctx.from.first_name + "\nWallet Address - " + ctx.update.message.text + "\nReferral Users - 0 \n\nReferral Link -\n\n (Tap to copy your link) \n\n`https://t.me/" + ctx.botInfo.username + "?start=" + ctx.from.id + "`\n\nShare your referral links with your friends on Telegram, WhatsApp, Facebook, and Twitter and tell them about this airdrop. When they join this contest through your referral link, your referral Users count . Good luck", {
+							ctx.telegram.sendMessage(ctx.from.id, "Account Info:\n\nName - " + ctx.from.first_name + "\nTeddy username - " + ctx.update.message.text + "\nReferral Users - 0 \n\nReferral Link -\n\n (Tap to copy your link) \n\n`https://t.me/" + ctx.botInfo.username + "?start=" + ctx.from.id + "`\n\nShare your referral links with your friends on Telegram, WhatsApp, Facebook, and Twitter and tell them about this airdrop. When they join this contest through your referral link, your referral Users count . Good luck", {
 								reply_markup: {
 									inline_keyboard: [
 										[{
@@ -210,7 +210,7 @@ const input_form = new WizardScene('input_data',
 						throw e
 					} else {
 
-						ctx.telegram.sendMessage(ctx.from.id, "Account Info:\n\nName - " + ctx.from.first_name + "\nWallet Address - " + ctx.update.message.text + "\nReferral Users - 0 \n\nReferral Link - \n\n (Tap to copy your link) \n\n `https://t.me/" + ctx.botInfo.username + "?start=" + ctx.from.id + "`\n\nShare your referral links with your friends on Telegram, WhatsApp, Facebook, and Twitter and tell them about this airdrop. When they join this contest through your referral link, your referral Users count . Good luck", {
+						ctx.telegram.sendMessage(ctx.from.id, "Account Info:\n\nName - " + ctx.from.first_name + "\nTeddy username - " + ctx.update.message.text + "\nReferral Users - 0 \n\nReferral Link - \n\n (Tap to copy your link) \n\n `https://t.me/" + ctx.botInfo.username + "?start=" + ctx.from.id + "`\n\nShare your referral links with your friends on Telegram, WhatsApp, Facebook, and Twitter and tell them about this airdrop. When they join this contest through your referral link, your referral Users count . Good luck", {
 							reply_markup: {
 								inline_keyboard: [
 									[{
