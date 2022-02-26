@@ -108,7 +108,7 @@ const input_form = new WizardScene('input_data',
 
 		ctx.user.instagram = ctx.update.message.text
 
-		ctx.reply(`Task 5: \n\nAdd Your Enjin Collectible wallet address`).catch((e) => console.log(" Something is wrong"))
+		ctx.reply(`Task 5: \n\nAdd Your Enjin Collectible Wallet Address`).catch((e) => console.log(" Something is wrong"))
 		return ctx.wizard.next()
 	},
 	(ctx) => {
