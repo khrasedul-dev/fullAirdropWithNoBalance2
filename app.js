@@ -425,6 +425,8 @@ bot.command('ref_link',(ctx)=>{
 })
 
 bot.command('ref_count',(ctx)=>{
+	console.log("test")
+
 	userModel.find({userId: ctx.from.id})
 	.then((data)=>{
 		if(data.length > 0){
@@ -438,9 +440,7 @@ bot.command('ref_count',(ctx)=>{
 })
 
 
-bot.command('/ref_count',(ctx)=>{
-	ctx.reply('')
-})
+
 
 
 
