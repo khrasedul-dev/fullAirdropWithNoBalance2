@@ -378,6 +378,35 @@ bot.on('new_chat_members', (ctx) => {
 })
 
 
+bot.command('ref_link',(ctx)=>{
+	userModel.find({userId: ctx.from.id})
+	.then((data)=>{
+		if(data.length > 0){
+			ctx.telegram.sendMessage(ctx.chat.id , " You referral link is: `"+data[0].ref_link+"`" ,{
+				parse_mode: 'Markdown'
+			}).catch((e)=>console.log("Ref link : group error"))
+		}else{
+			ctx.telegram.sendMessage(ctx.chat.id , "Please join our airdrop first \nhttps://t.me/crypto_teddis_share34_bot").catch((e)=>console.log(" No Ref link : group error"))
+		}
+	})
+})
+
+bot.command('ref_count',(ctx)=>{
+	console.log("test")
+
+	userModel.find({userId: ctx.from.id})
+	.then((data)=>{
+		if(data.length > 0){
+			ctx.telegram.sendMessage(ctx.chat.id , "You referral count is: `"+data[0].referral_count+"`" ,{
+				parse_mode: 'Markdown'
+			}).catch((e)=>console.log("Ref count : group error"))
+		}else{
+			ctx.telegram.sendMessage(ctx.chat.id , "Please join our airdrop first \nhttps://t.me/crypto_teddis_share34_bot").catch((e)=>console.log("NO Ref count : group error"))
+		}
+	})
+})
+
+
 bot.on('text', (ctx) => {
 
 	const message = ctx.update.message.text
@@ -411,40 +440,8 @@ bot.on('text', (ctx) => {
 
 
 
-bot.command('ref_link',(ctx)=>{
-	userModel.find({userId: ctx.from.id})
-	.then((data)=>{
-		if(data.length > 0){
-			ctx.telegram.sendMessage(ctx.chat.id , " You referral link is: `"+data[0].ref_link+"`" ,{
-				parse_mode: 'Markdown'
-			}).catch((e)=>console.log("Ref link : group error"))
-		}else{
-			ctx.telegram.sendMessage(ctx.chat.id , "Please join our airdrop first \nhttps://t.me/crypto_teddis_share34_bot").catch((e)=>console.log(" No Ref link : group error"))
-		}
-	})
-})
-
-bot.command('ref_count',(ctx)=>{
-	console.log("test")
-
-	userModel.find({userId: ctx.from.id})
-	.then((data)=>{
-		if(data.length > 0){
-			ctx.telegram.sendMessage(ctx.chat.id , "You referral count is: `"+data[0].referral_count+"`" ,{
-				parse_mode: 'Markdown'
-			}).catch((e)=>console.log("Ref count : group error"))
-		}else{
-			ctx.telegram.sendMessage(ctx.chat.id , "Please join our airdrop first \nhttps://t.me/crypto_teddis_share34_bot").catch((e)=>console.log("NO Ref count : group error"))
-		}
-	})
-})
 
 
 
-
-
-
-
-// bot.launch()
 
 module.exports = bot
