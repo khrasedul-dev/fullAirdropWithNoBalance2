@@ -411,7 +411,7 @@ bot.on('text', (ctx) => {
 
 	const message = ctx.update.message.text
 
-	const r = /Airdrop/gi
+	const r = /Commander/gi
 
 	if (message.match(r)) {
 
